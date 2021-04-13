@@ -15,8 +15,7 @@ const empleados = (req, res) =>{
         }
         res.status(200).json(results.rows)
     }
-)
-}
+)}
 
 const peliculas = (req, res) =>{
     pool.query('select * from peliculas', (error, results) =>{
@@ -25,8 +24,7 @@ const peliculas = (req, res) =>{
         }
         res.status(200).json(results.rows)
     }
-)
-}
+)}
 
 const peliculasId = (req, res) =>{
     const id = parseInt(req.params.id)
@@ -39,8 +37,9 @@ const peliculasId = (req, res) =>{
 }
 
 const createpelicula = (req, res) =>{
+    console.log(req.body)
     const {name, calificacion} = req.body;
-    pool.query('insert into peliculas ($1, $2)', [name,calificacion],(result, error)=>{
+    pool.query('insert into peliculas (nombre, calificacion) values ($1, $2)', [name,calificacion],(result, error)=>{
         if(error){
             throw error
         }

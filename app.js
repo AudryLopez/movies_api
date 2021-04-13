@@ -10,7 +10,7 @@ app.get('/', (req, res) =>{
 })
 app.get('/empleados', DB.empleados)
 app.get('/peliculas', DB.peliculas)
-app.get('/peliculas/:id', DB.peliculasId)
+app.get('/peliculas/?name&category', DB.peliculasId)
 
 app.put('/createpelicula/:nombre', DB.createpelicula)
 
