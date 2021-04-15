@@ -1,0 +1,14 @@
+h1 {
+    color: aqua;
+}
+
+
+button {
+    background-color: brown ;
+    height: 17px;
+    width: 50px;
+}
+
+body {
+    background-image: url("images/background.jpg");
+}
