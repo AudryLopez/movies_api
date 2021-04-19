@@ -1,14 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import callApi from './callApi';
 
-callApi();
+const names = callApi();
 
 function App() {
   return (
         <table id="example" className="table table-striped table-bordered" >
         <thead>
             <tr>
-                <th>Name</th>
+                <th>{names}</th>
                 <th>Position</th>
                 <th>Office</th>
                 <th>Age</th>
