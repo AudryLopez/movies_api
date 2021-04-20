@@ -12,9 +12,9 @@ app.get('/api/empleados/:id')
 app.get('/', (req, res) =>{
   res.send('<a href="/empleados">empleados</a>')
 })
-app.get('/empleados', DB.empleados)
-app.get('/peliculas', DB.peliculas)
-app.get('/peliculas/:id', DB.peliculasId)
+app.get('/api/empleados', DB.empleados)
+app.get('/api/peliculas', DB.peliculas)
+app.get('/api/peliculas/:id', DB.peliculasId)
 
 app.put('/api/createpelicula/:id', DB.createpelicula)
 
