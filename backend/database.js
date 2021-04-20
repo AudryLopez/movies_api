@@ -28,9 +28,10 @@ const peliculas = (req, res) =>{
 
 const peliculasId = (req, res) =>{
     const id = parseInt(req.params.id)
-    pool.query('select * from peliculas where codigo=$1', [id],(error, result) =>{
+    pool.query('select nombre, calificacion from peliculas where codigo = $1', [id],(error, result) =>{
         if(error){
             throw error
+
         }
             res.status(200).json(result.rows)
     })
