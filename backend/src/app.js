@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const DB = require('./database');
+const DB = require('./database/database');
 const app = express();
 
 app.use(cors())
@@ -15,7 +15,6 @@ app.get('/', (req, res) =>{
 app.get('/api/empleados', DB.empleados)
 app.get('/api/peliculas', DB.peliculas)
 app.get('/api/peliculas/:id', DB.peliculasId)
-
 app.put('/api/createpelicula/:id', DB.createpelicula)
 
 app.listen(port, (req, res) => {

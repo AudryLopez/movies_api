@@ -1,9 +1,15 @@
-import axios from "axios";
+import React from 'react';
 
-const callApi = ()=>{
-    axios.get('http://localhost:8000/peliculas')
-        .then(function (response) {
-            console.log(response);
-  })}
+import axios from 'axios';
 
-export default callApi;
+const CallApi = () =>{
+    axios.get('http://127.0.0.1:8000/api/peliculas')
+      .then(answ => (movie)=>{
+        console.log(movie)
+        return(
+          <p>{movie.nombre}</p>
+        )
+      })
+  }
+
+  export default CallApi;
