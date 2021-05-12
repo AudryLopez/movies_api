@@ -6,10 +6,18 @@
     <title></title>
   </head>
   <body>
-    <form  action="http://127.0.0.1:3000/createpelicula/" name="data" autocomplete="on" method="put">
+    <form  action="http://127.0.0.1:8000/createpelicula/" name="data" autocomplete="on" method="put">
         <input  class="form-control"  required="required" type="text" placeholder=""/>
         <input  class="form-control"  required="required" type="number" placeholder=""/>
         <button class="primary" type="submit"/>
     </form>
+    <p>{{movie.nombre}}</p>
+    <script>
+    fetch('http://127.0.0.1:8000/api/empleados')
+      .then(response => response)
+      .then(answ => answ.map((empleados)=>{
+
+      }))
+    </script>
   </body>
 </html>

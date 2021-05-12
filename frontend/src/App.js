@@ -5,10 +5,10 @@ import Movie from "./call/Recipe.js"
 
 function App() {
   return (
-    <div className="app">
-      <Movie/>
-    </div>
-  );
+		<div className="app">
+			<Movie />
+		</div>
+	);
 }
 
 export default App;

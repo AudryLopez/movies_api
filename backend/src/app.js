@@ -3,15 +3,13 @@ const cors = require('cors');
 const DB = require('./database/database');
 const app = express();
 
+
 app.use(cors())
 
 const port = 8000
 
 
 app.get('/api/empleados/:id')
-app.get('/', (req, res) =>{
-  res.send('<a href="/empleados">empleados</a>')
-})
 app.get('/api/empleados', DB.empleados)
 app.get('/api/peliculas', DB.peliculas)
 app.get('/api/peliculas/:id', DB.peliculasId)
