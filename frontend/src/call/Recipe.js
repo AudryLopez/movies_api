@@ -30,20 +30,17 @@ function Movies() {
 		return <div>Loading...</div>;
 	} else {
 		return (
-			<Grid item container>
+			<Grid item container justify="space-around">
 				<Grid item container xs={12} sm={8}>
 					<Grid container spacing={2}>
 						{items.map((item) => (
 							<Grid item xs={4}>
 								<Card variant="outlined" className={classes.root}>
 									<CardContent>
-										<Typography variant="h5" component="h2">
-											Nombre:
-										</Typography>
-										<Typography variant="body2" component="p">
+										<Typography className={classes.title} variant="h5" component="h2">
 											{item.nombre}
 										</Typography>
-										<Typography variant="body2" component="p">
+										<Typography className={classes.subTitle} variant="body2" component="p">
 											{item.calificacion}
 										</Typography>
 									</CardContent>
