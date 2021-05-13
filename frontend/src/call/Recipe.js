@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Grid, Card, Typography } from "@material-ui/core";
-import CardContent from "@material-ui/core/CardContent";
+import {
+	Grid,
+	Card,
+	Typography,
+	CardHeader,
+	CardContent,
+} from "@material-ui/core";
 import Style from "./recipe.style";
 
 function Movies() {
@@ -36,11 +41,12 @@ function Movies() {
 						{items.map((item) => (
 							<Grid item xs={4}>
 								<Card variant="outlined" className={classes.root}>
+									<CardHeader subheader={item.nombre} />
 									<CardContent>
-										<Typography className={classes.title} variant="h5" component="h2">
-											{item.nombre}
-										</Typography>
-										<Typography className={classes.subTitle} variant="body2" component="p">
+										<Typography
+											className={classes.subTitle}
+											variant="body2"
+											component="p">
 											{item.calificacion}
 										</Typography>
 									</CardContent>

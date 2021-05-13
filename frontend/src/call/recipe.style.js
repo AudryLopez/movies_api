@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
+		backgroundColor: "#f79845",
 		minWidth: 275,
 		minHeight: 120,
 		maxHeight: 120,
@@ -12,6 +13,9 @@ const useStyles = makeStyles((theme) => ({
 			minHeight: 80,
 			maxHeight: 80,
 		},
+	},
+	cardHeader: {
+		color: "#4caf50",
 	},
 	paper: {
 		minHeight: 140,
@@ -23,13 +27,13 @@ const useStyles = makeStyles((theme) => ({
 		transform: "scale(0.8)",
 	},
 	title: {
-		fontSize: 14,
+		fontSize: 16,
 		"@media (max-width:900)": {
 			fontSize: 12,
 		},
 	},
 	subTitle: {
-		fontSize: 12,
+		fontSize: 14,
 		"@media (max-width:900)": {
 			fontSize: 10,
 		},
