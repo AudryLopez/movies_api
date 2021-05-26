@@ -9,29 +9,22 @@ import {
 import Style from "./recipe.style";
 
 function Movies() {
-	const [error, setError] = useState(null);
 	const [isLoaded, setIsLoaded] = useState(false);
 	const [items, setItems] = useState([]);
 	const classes = Style();
 
+	const getData = async (url)=>{
+		const data = await fetch(url);
+		const response = await data.json();
+		setItems(response);
+		setIsLoaded(true);
+	}
+
 	useEffect(() => {
-		fetch("http://127.0.0.1:8000/api/peliculas")
-			.then((res) => res.json())
-			.then(
-				(result) => {
-					setIsLoaded(true);
-					setItems(result);
-				},
-				(error) => {
-					setIsLoaded(true);
-					setError(error);
-				}
-			);
+		getData("http://127.0.0.1:8000/api/peliculas");
 	}, []);
 
-	if (error) {
-		return <div>Error: {error.message}</div>;
-	} else if (!isLoaded) {
+ if (!isLoaded) {
 		return <div>Loading...</div>;
 	} else {
 		return (
